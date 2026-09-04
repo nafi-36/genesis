@@ -1,0 +1,315 @@
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+section {
+  margin-top: 12rem;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.main-header .navbar {
+  padding: 15px 0;
+}
+.main-header .navbar-nav > li {
+  padding: 0 10px;
+}
+.main-header .navbar-nav > li > .nav-link {
+  padding: 0 5px;
+  line-height: 35px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #b686ff;
+  letter-spacing: 3px;
+  position: relative;
+}
+.main-header .navbar-nav > li > .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #b686ff, #ff90da);
+  transition: ease 0.5s;
+}
+.main-header .navbar-nav > li > .nav-link:hover {
+  background: linear-gradient(90deg, #b686ff, #ff90da);
+  color: transparent;
+  background-clip: text;
+}
+.main-header .navbar-nav > li > .nav-link:hover:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .main-header .navbar-collapse {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #b686ff, #ff90da);
+    color: transparent;
+    background-clip: text;
+  }
+  .main-header .navbar-nav > li {
+    border-top: 0.1px solid grey;
+    background-color: white;
+  }
+  .main-header .navbar-nav > li > .nav-link {
+    line-height: 60px;
+  }
+  .main-header .navbar-nav > li > .nav-link:after {
+    display: none;
+  }
+}
+#title {
+  margin-bottom: 4rem;
+}
+.btn {
+  color: #ff90da;
+  text-decoration: none;
+  border: 1px solid #b686ff;
+  border-radius: 30px;
+  padding: 8px 30px;
+  box-shadow: 0px 2px 5px #ff90da;
+}
+.btn:hover {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(45deg, #b686ff, #ff90da);
+}
+.myname {
+  background-image: linear-gradient(45deg, #b686ff, #ff90da);
+  color: transparent;
+  background-clip: text;
+}
+#card-container {
+  max-width: 500px;
+}
+#card {
+  border: 1px solid black;
+  border-radius: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+#card:hover {
+  transform: scale(1.01);
+  background-color: black;
+  color: white;
+}
+#card i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#card span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #b686ff, #ff90da);
+  color: transparent;
+  background-clip: text;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+.timeline:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: black;
+  top: 0;
+  left: 50%;
+}
+#edu-right {
+  background: black;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  position: relative;
+  left: 50%;
+}
+#edu-left {
+  background: black;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-100%);
+}
+.box {
+  padding: 20px 50px;
+  position: relative;
+  width: 50%;
+}
+.text-box {
+  padding: 20px 30px;
+  background: white;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.text-box:hover {
+  transform: scale(1.03);
+  background: black;
+  color: white;
+}
+.left-box {
+  left: 0;
+}
+.right-box {
+  left: 50%;
+}
+.card-img-top {
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.input {
+  width: 100%;
+  line-height: 1cm;
+  min-height: 1.4cm;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #b686ff;
+  border-radius: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+.input:hover {
+  transform: scale(1.02);
+}
+#brand {
+  text-decoration: none;
+  color: black;
+}
+#brand:hover {
+  transform: scale(1.1);
+}
+
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.22;
+}
+.bg-blob.b1 {
+  width: 450px;
+  height: 450px;
+  background: #b686ff;
+  top: -10%;
+  left: -10%;
+  animation: driftA 22s ease-in-out infinite;
+}
+.bg-blob.b2 {
+  width: 400px;
+  height: 400px;
+  background: #ff90da;
+  top: 20%;
+  right: -12%;
+  animation: driftB 26s ease-in-out infinite;
+}
+.bg-blob.b3 {
+  width: 420px;
+  height: 420px;
+  background: #ff90da;
+  bottom: -8%;
+  left: 5%;
+  animation: driftA 30s ease-in-out infinite reverse;
+}
+.bg-blob.b4 {
+  width: 380px;
+  height: 380px;
+  background: #b686ff;
+  bottom: 10%;
+  right: -8%;
+  animation: driftB 24s ease-in-out infinite reverse;
+}
+@keyframes driftA {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(60px, 50px); }
+}
+@keyframes driftB {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-50px, -40px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob { animation: none; }
+}
+
+/* ---- Typewriter cursor for the rotating role text ---- */
+#role-cursor {
+  color: #b686ff;
+  font-size: 30px;
+  vertical-align: middle;
+  animation: blinkCursor 0.85s steps(1) infinite;
+}
+@keyframes blinkCursor {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob { animation: none; }
+  #role-cursor { animation: none; }
+}
+
+/* ---- Skills / tech stack tiles ---- */
+.skill-item {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 1.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: default;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease,
+    color 0.2s ease;
+  height: 100%;
+}
+.skill-item:hover {
+  transform: scale(1.06);
+  background-color: black;
+  color: white;
+}
+.skill-item i {
+  font-size: 2.6rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.skill-item:hover i {
+  filter: grayscale(0%);
+}
+.skill-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
